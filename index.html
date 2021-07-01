@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Alterando BG</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section>
+    <div class="bg">Vermelho</div>
+    <select class="selectCor" onchange="trocarCor(this)">
+      <option value="#ff2323">Vermelho</option>
+      <option value="#66ff00">Verde</option>
+      <option value="#640066">Roxo</option>
+      <option value="#ffff12">Amarelo</option>
+      <option value="#fcb3c5">Rosa</option>
+    </select>
+  </section>
+  <script>
+    //      SCRIPT PARA ALTERAR A COR E O TEXTO
+    function trocarCor(pegarCor){
+      let bg = document.querySelector('.bg');
+      let selectCor = pegarCor.value;
+      let texto = pegarCor.options[pegarCor.selectedIndex].text
+      bg.style.background = selectCor;
+      bg.innerHTML = texto;
+    }
+  </script>
+</body>
+</html>
